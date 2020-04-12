@@ -6,6 +6,8 @@ library pck_lib;
 use pck_lib.sim.all;
 use pck_lib.types.all;
 
+library counter_lib;
+
 entity counter_tb is
 end counter_tb; 
 
@@ -21,7 +23,7 @@ begin
 
   clk <= not clk after sim_clk_period / 2;
 
-  DUT : entity seg7.counter(rtl)
+  DUT : entity counter_lib.counter(rtl)
     generic map (
       clk_counter_max => clk_counter_max
     )
