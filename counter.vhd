@@ -41,7 +41,7 @@ begin
           if value_i = value_type'high then
             value_i <= 0;
           else
-            value_i <= value_i + 2;
+            value_i <= value_i + 1;
           end if;
         
         else
